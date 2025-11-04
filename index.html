@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owly - Libreria</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Owly Library</h1>
+
+    <form id="searchForm" aria-label="Cerca libri per categoria" onsubmit="return false;">
+      <label for="categoryInput" class="sr-only">Categoria libri</label>
+      <input type="text" id="categoryInput" placeholder="Inserisci categoria (es. fantasy)" aria-required="true">
+      <button id="searchBtn" type="submit">Cerca</button>
+    </form>
+
+    <div id="booksContainer" aria-live="polite" aria-label="Elenco dei libri"></div>
+  </main>
+
+  <!-- Modal descrizione -->
+  <div id="descriptionModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+    <div class="modal-content">
+      <button id="closeModal" aria-label="Chiudi modal">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
